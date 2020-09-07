@@ -1,5 +1,11 @@
 <?php
-require_once('include/dbhost.php');
+require_once('include/lib/dbhost.php');
+
+// defines
+define("APP_PATH",dirname(__FILE__));
 
 
-//define("APP_PATH",);
+
+// get footers
+
+include APP_PATH."/include/header.php";
