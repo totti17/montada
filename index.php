@@ -1,9 +1,11 @@
 <?php
   include "init.php";
+  $do = isset($_GET['do']) ? $_GET['do'] : "default";
 ?>
 <section class="contents col-xs-12">
     <div class="row">
           <?php include_once APP_PATH."/include/sidebar.php"; ?>
+          <?php if($do == "default"){ ?>
         <div class="main_posts">
             <div class="ads">
                 <img src="layout/img/ads.jpg" alt="">
@@ -62,6 +64,9 @@
                 </div>
             </div>
         </div>
+      <?php }elseif($do == "logout"){
+
+      } ?>
         <?php include_once APP_PATH."/include/sidebar2.php"; ?>
     </div>
 </section>

@@ -131,4 +131,14 @@ footer p{margin: 10px 0;}
   border-left-width: 7px;
 }
 /*=============== ============*/
+.headsprof{float: right;max-width: 200px;
+    width: 200px;margin-right: 25px;margin-top: 25px;}
+.headsprof .img{padding:15px 10px;}
+.headsprof .img img{width: 100%;height: auto;}
+.headsprof .links ul{margin-top: 10px;}
+.headsprof .links,.headsprof .links ul{padding: 0;text-align: left;color: #fff;}
+.headsprof .links strong{font-size: 13px;}
+.headsprof .links li{margin: 3px 0;}
+.headsprof .links li a{font-size: 12px;padding: 2px;color: #fff;text-decoration: underline;}
+.headsprof .links li a:hover{background: transparent;color: #f79623;}
 /*=============== ============*/
