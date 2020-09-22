@@ -39,7 +39,7 @@ box-shadow: none;    padding: 5px;
 /*=============== ============*/
 .left_sidebar,.right_sidebar{width: 18%;float: left;}
 .main_posts{width: 64%;float: left;padding:30px 20px;}
-.main_posts img{max-width: 100;width: 100%;}
+.main_posts .posts img{max-width: 100%;}
 .widgets{margin-bottom: 25px;}
 .left_sidebar .widgets h2,.right_sidebar .widgets h2{
     background-color: #333333;
@@ -142,3 +142,38 @@ footer p{margin: 10px 0;}
 .headsprof .links li a{font-size: 12px;padding: 2px;color: #fff;text-decoration: underline;}
 .headsprof .links li a:hover{background: transparent;color: #f79623;}
 /*=============== ============*/
+.myprofiles h3{  background-color: #333333;
+  padding: 15px;
+  font-size: 13px;
+  font-weight: bold;
+  color: white;
+  border-left-style: solid;
+  border-left-color: #cc0000;
+  border-left-style: solid;
+  border-left-width: 7px;
+}
+.myprofiles .usreinfo{text-align: left;}
+.myprofiles .usreinfo .img{width: 150px;height: 220px;padding-top: 35px;    text-align: center;}
+.myprofiles .usreinfo .img a{padding: 5px;background: #333;color: #fff;margin: 25px auto 0;display: inline-block;}
+.myprofiles .links li{
+  margin: 10px;
+  font-family: Tahoma, Geneva, sans-serif;
+  font-size: 11px;
+}
+.editprofil_contents{padding: 25px 0;}
+.editprofil_contents label{font-size: 13px;font-weight: normal;}
+.editprofil_contents input,.editprofil_contents textarea{border-radius: 5px;border:1px solid #ddd;font-size: 13px;padding: 5px;}
+.editprofil_contents h3{
+ background-color: #333333;
+ padding: 15px;
+ font-size: 13px;
+ font-weight: bold;
+ color: white;
+ border-left-style: solid;
+ border-left-color: #cc0000;
+ border-left-style: solid;
+ border-left-width: 7px;
+}
+.editprofil_contents input[type='submit']{
+  width: 150px;text-align: center;background: #333;color: #fff;padding: 8px 5px;
+}

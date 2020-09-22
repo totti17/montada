@@ -18,7 +18,7 @@
           <header class="headers col-xs-12">
               <div class="inners">
                   <div class="logos">
-                      <img src="layout/img/logo.png" alt="">
+                      <a href="/montada"><img src="layout/img/logo.png" alt="" /></a>
                   </div>
                   <!-- end of logos -->
 									<?php if(!isset($_SESSION['userlogin'])){ ?>
@@ -45,10 +45,12 @@
 		                </div>
 										<?php
 											}else{
+						            $emails  = $_SESSION['userlogin'];
+						            $usersinf = fethuser1vals('email',$emails);
 										?>
 											<div class="headsprof row">
 													<div class='img col-md-6'>
-															<img src="layout/img/user.png" alt="">
+															<img src="<?php if(!empty($usersinf['images'] or $usersinf['images'] != '')){echo "layout/img/avatars/".$usersinf['images'];}else{ echo 'layout/img/user.png'; } ?>" alt="">
 													</div>
 													<div class="links col-md-5">
 															<strong>Hi, totti17</strong>

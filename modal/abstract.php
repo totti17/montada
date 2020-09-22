@@ -6,6 +6,22 @@ function checkuserlogin(){
   }
 }
 //
+function checkuserlogindone(){
+  if(isset($_SESSION['userlogin'])){
+    	return true;
+  }else{
+      return false;
+  }
+}
+//
+function singCheck($table,$fileds1,$value1,$get){
+  global $connect;
+  $stat = $connect->prepare("SELECT * FROM $table WHERE $fileds1 = ?");
+  $stat->execute(array($value1));
+  $fetch =  $stat->fetch();
+  return $fetch[$get];
+}
+//
 function checkfounduser($fileds,$value){
   global $connect;
   $stat = $connect->prepare("SELECT * FROM users WHERE $fileds = ?");
@@ -17,6 +33,13 @@ function fethuser2vals($fileds1,$fileds2,$value1,$value2){
   global $connect;
   $stat = $connect->prepare("SELECT * FROM users WHERE $fileds1 = ? AND $fileds2 = ?");
   $stat->execute(array($value1,$value2));
+  return  $stat->fetch();
+}
+// fetch user through emails
+function fethuser1vals($fileds1,$value1){
+  global $connect;
+  $stat = $connect->prepare("SELECT * FROM users WHERE $fileds1 = ?");
+  $stat->execute(array($value1));
   return  $stat->fetch();
 }
 // add new user
@@ -39,4 +62,45 @@ function addnewuser($username,$passwords,$emails){
      }else{
        return false;
      }
+}
+//
+function updateprofiles1($fullname,$phones,$location,$about,$avatar,$newpassword,$emails){
+  global $connect;
+  $stats = $connect->prepare("UPDATE users SET fullname = ?,phone = ?,location = ?,aboutme = ?,images = ?,passwords = ? WHERE email = ?");
+  $stats->execute(array($fullname,$phones,$location,$about,$avatar,$newpassword,$emails));
+  if($stats->rowCount() > 0){
+    return true;
+  }else{
+      return false;
+  }
+}
+function updateprofiles2($fullname,$phones,$location,$about,$newpassword,$emails){
+  global $connect;
+  $stats = $connect->prepare("UPDATE users SET fullname = ?,phone = ?,location = ?,aboutme = ?,passwords = ? WHERE email = ?");
+  $stats->execute(array($fullname,$phones,$location,$about,$newpassword,$emails));
+  if($stats->rowCount() > 0){
+    return true;
+  }else{
+      return false;
+  }
+}
+function updateprofiles3($fullname,$phones,$location,$about,$avatar,$emails){
+  global $connect;
+  $stats = $connect->prepare("UPDATE users SET fullname = ?,phone = ?,location = ?,aboutme = ?,images = ? WHERE email = ?");
+  $stats->execute(array($fullname,$phones,$location,$about,$avatar,$emails));
+  if($stats->rowCount() > 0){
+    return true;
+  }else{
+      return false;
+  }
+}
+function updateprofiles4($fullname,$phones,$location,$about,$emails){
+  global $connect;
+  $stats = $connect->prepare("UPDATE users SET fullname = ?,phone = ?,location = ?,aboutme = ? WHERE email = ?");
+  $stats->execute(array($fullname,$phones,$location,$about,$emails));
+  if($stats->rowCount() > 0){
+    return true;
+  }else{
+      return false;
+  }
 }
