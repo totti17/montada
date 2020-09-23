@@ -35,7 +35,7 @@
                        <tr>
                           <th scope="row"><?php echo $i; ?></th>
                           <td><?php echo $posts['title']; ?></td>
-                          <td>$<?php echo substr($posts['descrip'],150); ?></td>
+                          <td><?php echo substr(strip_tags($posts['descrip']),0,150); ?></td>
                           <td><?php echo singCheck('category','id',$posts['cats_id'],'name') ?></td>
                           <td><?php echo $posts['datts']; ?></td>
                           <td>
@@ -87,7 +87,7 @@
                  <tr>
                     <th scope="row"><?php echo $i; ?></th>
                     <td><?php echo $posts['title']; ?></td>
-                    <td>$<?php echo substr($posts['descrip'],150); ?></td>
+                    <td><?php echo substr(strip_tags($posts['descrip']),0,150); ?></td>
                     <td><?php echo singCheck('category','id',$posts['cats_id'],'name') ?></td>
                     <td><?php echo $posts['datts']; ?></td>
                     <td>

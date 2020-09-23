@@ -31,9 +31,9 @@
                     <div class="npost_body">
                       <div class="npost_metadata">
                         &nbsp;&nbsp;Author:
-                        <a href="">ZeuS</a>
+                        <a href="single.php?id=<?php echo $posts['id']; ?>">kingdoem3d</a>
                         <span><?php echo $posts['datts']; ?></span>
-                        <a href="">Comments: 23</a>
+                        <a href="single.php?id=<?php echo $posts['id']; ?>">Comments: <?php echo commentscounters("posts_id",$posts['id']); ?></a>
                       </div>
                       <div class="thumbnails">
                         <a href="single.php?id=<?php echo $posts['id']; ?>" class="highslide" target="_blank">
@@ -41,7 +41,7 @@
                         </a><!--TEnd-->
                       </div>
                       <div class="details">
-                        <?php echo $posts['descrip']; ?>
+                        <?php echo substr($posts['descrip'],150); ?>
                       </div>
                       <div class="nblock_foot">
                           <a href="single.php?id=<?php echo $posts['id']; ?>">

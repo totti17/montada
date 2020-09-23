@@ -1,7 +1,10 @@
 body{background: #f8f8f8;padding: 0;margin: 0;}
 ul,nav,ol{list-style: none;padding: 0;margin: 0;}
-
-
+.btn-secondary{
+    background-color: #333333;
+    color: #fff;
+}
+.btn-padd{    padding: 10px 5%;}
 /*=============== ============*/
 .main_wrapper{margin: 15px auto;background: #fff;-webkit-box-shadow: 0 0 10px 1px #eee;-moz-box-shadow: 0 0 10px 1px #eee;box-shadow: 0 0 10px 1px #eee;max-width: 95%;margin: 0 auto;    float: none;
 overflow: hidden;}
@@ -71,7 +74,20 @@ box-shadow: none;    padding: 5px;
 	border-bottom-width: thin;
 	text-align: center;
 }
-.left_sidebar .widgets .contents img,.right_sidebar .widgets .contents img{}
+.left_sidebar .widgets .contents img,.right_sidebar .widgets .contents img{max-width: 100%;}
+.widgets ul{text-align: left;}
+.widgets ul li{position: relative;padding-left: 10px;}
+.widgets ul li a{color: #333;padding: 5px;display: inline-block;}
+.widgets ul li:after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 0px;
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    background: #dd0505;
+}
 .posts .npost{
 	background-color: white;
   padding: 25px;
@@ -92,7 +108,10 @@ box-shadow: none;    padding: 5px;
 .posts .npost .npost_categ{overflow: hidden;width: 100%;display: block;}
 .posts .npost .npost_categ a{display: inline-block;    background: #cc0000;
     color: #fff;padding: 6px 12px;margin: 5px;}
-.posts .npost .npost_metadata{padding: 5px 0;margin-bottom: 5px;}
+.posts .npost .npost_metadata{padding: 5px 0;margin-bottom: 15px;    overflow: hidden;}
+.npost_metadata .cols{margin-right: 10px;float: left;}
+.npost_metadata .cols i{margin-right: 5px;float: left;color: #7b4609;}
+.npost_metadata .cols a{color: #666;}
 /*=============== ============*/
 .post_navigation{width: 100%;clear: both;margin: 15px 0;text-align: center;}
 .post_navigation a:link, .post_navigation a:visited, .post_navigation a:active,.post_navigation span {
@@ -177,3 +196,101 @@ footer p{margin: 10px 0;}
 .editprofil_contents input[type='submit']{
   width: 150px;text-align: center;background: #333;color: #fff;padding: 8px 5px;
 }
+/*=============== ============*/
+.relatedposts{
+  width: 100%;clear: both;
+  margin: 25px 0;
+}
+.relatedposts .heads{
+  background-color: #333333;
+  padding: 7px 10px 7px 10px;
+  font-size: 13px;
+  font-weight: bold;
+  color: white;
+  border-left-style: solid;
+  border-left-color: #cc0000;
+  border-left-style: solid;
+  border-left-width: 7px;
+}
+.posts_relat ul{margin: 25px 0;}
+.posts_relat ul li{position: relative;padding-left: 10px;}
+.posts_relat ul li:after{
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 0px;
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  background: #dd0505;
+}
+.posts_relat ul li a{    color: #333; padding: 5px;}
+.posts_relat ul li a:hover{}
+/*=============== ============*/
+.comments_froms{
+  background-color: white;
+  padding: 25px;
+  font-size: 11px;
+  vertical-align: middle;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 0 5px 1px #ddd;
+  position: relative;
+  margin: 10px 0;
+}
+.comments_froms .heads{
+  background-color: #333333;
+  padding: 7px 10px 7px 10px;
+  font-size: 13px;
+  font-weight: bold;
+  color: white;
+  border-left-style: solid;
+  border-left-color: #cc0000;
+  border-left-style: solid;
+  border-left-width: 7px;
+  margin-bottom: 20px;
+}
+/*=============== ============*/
+.comments_block{
+  background-color: white;
+  padding: 25px;
+  font-size: 11px;
+  vertical-align: middle;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 0 5px 1px #ddd;
+  position: relative;
+  margin: 10px 0;
+}
+.chead{width: 100%;display: table;background: #333333; padding:10px 5px;font-size: 12px;}
+.chead *{display: table-cell;text-align: left;color: #fff;}
+.chead span.fa{display: inline-block;color: #bc7a7a;margin-right: 6px;}
+.chead2 {overflow: hidden;}
+.chead2 .cuser{width: 25%;float: left;height: 130px;}
+.chead2 .cuser img{max-width: 100%;}
+.chead2 .ctext{float: left;width: 75%;height: 130px;}
+.chead2 #comm{
+  padding: 20px;
+  height: 90%;
+  background: #f1f1f1;
+  margin: 10px 5px 0;
+  border: 1px solid #d5d5d5;
+  box-sizing: border-box;
+
+}
+/*=============== ============*/
+.uservipnotallowd{margin-top: 15px;}
+.uservipnotallowd .heads{    background-color: #333333;
+    padding: 7px;
+    font-size: 13px;
+    font-weight: bold;
+    color: white;
+    border-left-style: solid;
+    border-left-color: #cc0000;
+    border-left-style: solid;
+    border-left-width: 7px;}
+/*=============== ============*/
+/*=============== ============*/
+/*=============== ============*/
+/*=============== ============*/
+/*=============== ============*/

@@ -19,3 +19,6 @@ function pre($var){
 function get_input($key){
     return isset($_POST[$key]) ? strip_tags($_POST[$key]) : null;
 }
+function post($key){
+  return isset($_POST[$key]) ? $_POST[$key] : null;
+}

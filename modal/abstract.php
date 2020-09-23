@@ -22,6 +22,13 @@ function singCheck($table,$fileds1,$value1,$get){
   return $fetch[$get];
 }
 //
+function checkfounded($table,$fileds,$value){
+  global $connect;
+  $stat = $connect->prepare("SELECT * FROM $table WHERE $fileds = ?");
+  $stat->execute(array($value));
+  return  $stat->rowCount();
+}
+//
 function checkfounduser($fileds,$value){
   global $connect;
   $stat = $connect->prepare("SELECT * FROM users WHERE $fileds = ?");
@@ -103,4 +110,30 @@ function updateprofiles4($fullname,$phones,$location,$about,$emails){
   }else{
       return false;
   }
+}
+function addcomments($uid,$post_id,$comment_contents){
+    $dattes  = (new \DateTime())->format('Y-m-d H:i:s');
+    global $connect;
+    $stat = $connect->prepare("INSERT INTO comments(conetents,user_id,posts_id,dattes)
+   VALUES
+   (:zcontnt,:zuser,:zpostid,:zdatts)
+   ");
+   $stat->execute(array(
+   ':zcontnt'       => $comment_contents,
+   ':zuser'         => $uid,
+   ':zpostid'       => $post_id,
+   ':zdatts'        => $dattes,
+   ));
+
+   if($stat->rowCount() > 0){
+     return true;
+   }else{
+     return false;
+   }
+}
+function commentscounters($fileds1,$value1){
+  global $connect;
+  $stat = $connect->prepare("SELECT count(id) FROM comments WHERE $fileds1 = ?");
+  $stat->execute(array($value1));
+  return  $stat->fetchColumn();
 }

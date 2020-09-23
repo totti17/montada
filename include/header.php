@@ -10,6 +10,7 @@
 		<!-- font-aweasome css -->
 		<link rel="stylesheet" type="text/css" href="layout/css/font-awesome.min.css">
 		<!-- custom style -->
+		<link rel="stylesheet" href="layout/css/trumbowyg.min.css" />
 		<link rel="stylesheet" type="text/css" href="layout/css/style.css" />
 		<!-- -->
 	</head>
@@ -53,10 +54,9 @@
 															<img src="<?php if(!empty($usersinf['images'] or $usersinf['images'] != '')){echo "layout/img/avatars/".$usersinf['images'];}else{ echo 'layout/img/user.png'; } ?>" alt="">
 													</div>
 													<div class="links col-md-5">
-															<strong>Hi, totti17</strong>
+															<strong>Hi, <?php echo $usersinf['name']; ?></strong>
 															<ul class="nav">
 																	<li><a href="index.php?do=profile">Profile</a></li>
-																	<li><a href="index.php?do=favourite">Favorites: 0</a></li>
 																	<li><a href="index.php?do=logout">Exit</a></li>
 															</ul>
 													</div>

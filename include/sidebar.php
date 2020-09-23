@@ -4,15 +4,20 @@
             <h2>Top News</h2>
             <div class="contents">
                 <ul>
+                  <?php
+                    $stats = $connect->prepare("SELECT * FROM posts ORDER BY id DESC LIMIT 10");
+                    $stats->execute();
+                    $i = 1;
+                    $allposts = $stats->fetchAll();
+                    //
+                    foreach ($allposts as $posts){
+                    ?>
                     <li>
-                        <a href="#">news1</a>
+                        <a href="single.php?id=<?php echo $posts['id']; ?>"><?php echo $posts['title']; ?></a>
                     </li>
-                    <li>
-                        <a href="#">news1</a>
-                    </li>
-                    <li>
-                        <a href="#">news1</a>
-                    </li>
+                  <?php
+                    }
+                  ?>
                 </ul>
             </div>
         </div>

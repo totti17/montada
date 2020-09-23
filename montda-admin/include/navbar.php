@@ -22,7 +22,7 @@
                 <li>
                   <a href="dashboard.php?do=categs" class="dropdown-toggle">الأقسام<i class="fa fa-tags"></i></a>
                 </li>
-                <li><a target="_blank">الصفحات <i class="fa fa-sticky-note"></i></a></li>
+                <li><a target="_blank">الصفحات <i class="fa fa-building-o"></i></a></li>
                 <li><a href="members.php"><i class="fa fa-user"></i> الأعضاء</a></li>
                 <li><a href="logout.php"><i class="fa fa-gear"></i> تسجيل الخروج</a></li>
               </ul>
